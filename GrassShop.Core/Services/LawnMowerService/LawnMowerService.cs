@@ -59,7 +59,7 @@ public class LawnMowerService(GrassDbContext db) : ILawnMowerService
 
         db.LawnMowers.Remove(entity);
         await db.SaveChangesAsync();
-        return false;
+        return true;
     }
 
 }
