@@ -1,5 +1,6 @@
 <Solution>
-  <Project Path="GrassShop.WebAPI.csproj" />
   <Project Path="GrassShop.Core/GrassShop.Core.csproj" />
   <Project Path="GrassShop.Db/GrassShop.Db.csproj" />
+  <Project Path="GrassShop.Tests/GrassShop.Tests.csproj" />
+  <Project Path="GrassShop.WebAPI.csproj" />
 </Solution>

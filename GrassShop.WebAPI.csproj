@@ -4,7 +4,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <DefaultItemExcludes>$(DefaultItemExcludes);GrassShop.Core/**;GrassShop.Db/**</DefaultItemExcludes>
+    <DefaultItemExcludes>$(DefaultItemExcludes);GrassShop.Core/**;GrassShop.Db/**;GrassShop.Tests/**</DefaultItemExcludes>
   </PropertyGroup>
 
   <ItemGroup>
