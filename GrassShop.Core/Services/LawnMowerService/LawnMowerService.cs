@@ -8,7 +8,7 @@ namespace GrassShop.Core.Services.LawnMowerService;
 public class LawnMowerService(GrassDbContext db) : ILawnMowerService
 {
     public async Task<LawnMowerModel> CreateLawnMowerAsync(CreateLawnMowerArgs args)
-    {   
+    {
         var entity = new LawnMower
         {
             Name = args.Name,
@@ -21,19 +21,19 @@ public class LawnMowerService(GrassDbContext db) : ILawnMowerService
         db.LawnMowers.Add(entity);
         await db.SaveChangesAsync();
 
-        return ToModel(entity);
+        return entity.ToModel();
     }
 
     public async Task<IEnumerable<LawnMowerModel>> GetAllLawnMowersAsync()
     {
         var entities = await db.LawnMowers.ToListAsync();
-        return entities.Select(ToModel);
+        return entities.Select(e => e.ToModel());
     }
 
     public async Task<LawnMowerModel?> GetLawnMowerByIdAsync(int id)
     {
         var entity = await db.LawnMowers.FindAsync(id);
-        return entity is null ? null : ToModel(entity);
+        return entity is null ? null : entity.ToModel();
     }
 
     public async Task<LawnMowerModel?> UpdateLawnMowerAsync(int id, UpdateLawnMowerArgs args)
@@ -49,7 +49,7 @@ public class LawnMowerService(GrassDbContext db) : ILawnMowerService
 
         await db.SaveChangesAsync();
 
-        return ToModel(entity);
+        return entity.ToModel();
     }
 
     public async Task<bool> DeleteLawnMowerAsync(int id)
@@ -62,13 +62,4 @@ public class LawnMowerService(GrassDbContext db) : ILawnMowerService
         return true;
     }
 
-    private static LawnMowerModel ToModel(LawnMower entity) => new()
-    {
-        Id = entity.Id,
-        Name = entity.Name,
-        Brand = entity.Brand,
-        Description = entity.Description,
-        Price = entity.Price,
-        Stock = entity.Stock
-    };
 }

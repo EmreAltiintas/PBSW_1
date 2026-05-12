@@ -10,7 +10,10 @@
       "PowerShell(Start-Sleep -Seconds 3; try { $r = Invoke-WebRequest -Uri \"https://localhost:7216/scalar/v1\" -UseBasicParsing -SkipCertificateCheck; $r.StatusCode } catch { $_.Exception.Message })",
       "Bash(dotnet run *)",
       "PowerShell(netstat *)",
-      "PowerShell(Get-Process *)"
+      "PowerShell(Get-Process *)",
+      "PowerShell(dotnet test *)",
+      "Bash(dotnet build *)",
+      "Bash(dotnet test *)"
     ]
   }
 }

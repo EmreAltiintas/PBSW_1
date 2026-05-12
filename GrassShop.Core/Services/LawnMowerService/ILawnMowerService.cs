@@ -1,4 +1,4 @@
-﻿using GrassShop.Core.Services.LawnMowerService.Models;
+using GrassShop.Core.Services.LawnMowerService.Models;
 
 namespace GrassShop.Core.Interfaces;
 
