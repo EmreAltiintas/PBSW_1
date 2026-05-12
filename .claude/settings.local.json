@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(dotnet add *)",
+      "PowerShell(dotnet run *)",
+      "PowerShell(dotnet msbuild *)",
+      "PowerShell(Start-Process -FilePath \"dotnet\" -ArgumentList \"run --project `\"C:\\\\Users\\\\PITA\\\\source\\\\repos\\\\PBSW_1\\\\GrassShop.WebAPI.csproj`\"\" -PassThru)",
+      "PowerShell(Invoke-WebRequest -Uri \"http://localhost:5203/openapi/v1.json\" -UseBasicParsing -ErrorAction SilentlyContinue)",
+      "PowerShell(Start-Sleep -Seconds 4; Invoke-WebRequest -Uri \"http://localhost:5203/scalar/v1\" -UseBasicParsing -ErrorAction SilentlyContinue | Select-Object StatusCode)",
+      "PowerShell(Start-Sleep -Seconds 3; try { $r = Invoke-WebRequest -Uri \"https://localhost:7216/scalar/v1\" -UseBasicParsing -SkipCertificateCheck; $r.StatusCode } catch { $_.Exception.Message })",
+      "Bash(dotnet run *)",
+      "PowerShell(netstat *)",
+      "PowerShell(Get-Process *)"
+    ]
+  }
+}
