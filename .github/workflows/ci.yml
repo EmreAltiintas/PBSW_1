@@ -1,3 +1,4 @@
+
 name: CI
 
 on:
@@ -26,4 +27,4 @@ jobs:
         run: dotnet build PBSW_1.slnx --no-restore --configuration Release
 
       - name: Test
-        run: dotnet test GrassShop.Tests/GrassShop.Tests.csproj --no-build --configuration Release --verbosity normal
+        run: dotnet test tests/GrassShop.Tests/GrassShop.Tests.csproj --no-build --configuration Release --verbosity normal
