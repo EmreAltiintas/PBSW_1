@@ -1,0 +1,6 @@
+@PBSW_1_HostAddress = https://localhost:7154
+
+GET {{PBSW_1_HostAddress}}/api/LawnMowers
+Accept: application/json
+
+###

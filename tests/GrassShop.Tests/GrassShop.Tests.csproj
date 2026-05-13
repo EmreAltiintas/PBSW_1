@@ -15,8 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GrassShop.Core\GrassShop.Core.csproj" />
-    <ProjectReference Include="..\GrassShop.Db\GrassShop.Db.csproj" />
+    <ProjectReference Include="..\..\backend\GrassShop.Core\GrassShop.Core.csproj" />
+    <ProjectReference Include="..\..\backend\GrassShop.Db\GrassShop.Db.csproj" />
   </ItemGroup>
 
 </Project>
